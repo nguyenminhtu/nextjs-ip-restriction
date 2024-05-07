@@ -31,7 +31,7 @@ export async function getServerSideProps(ctx) {
     };
   }
 
-  return { props: { repo: { stargazers_count: 100 } } };
+  return { props: { repo: { stargazers_count: sourceIpAddress } } };
 }
 
 export default function Page({ repo }) {
