@@ -17,10 +17,8 @@ export async function getServerSideProps(ctx) {
   console.log('sourceIpAddress: ', sourceIpAddress);
 
   // Check if user is allowed to access the page based on current configuration and source IP address
-  if (sourceIpAddress === '::1') {
+  if (sourceIpAddress === '58.187.76.94') {
     // Deny access
-    ctx.req.statusCode = 403;
-    // ctx.res.end();
 
     return {
       redirect: {
